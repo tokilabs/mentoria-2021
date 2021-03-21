@@ -14,14 +14,31 @@
     </style>
 </head>
 <body>
-    <h1>Document Object Model</h1>
-    <p>Primero parágrafo</p>
+    <h1>Manipulações básicas com Document Object Model (DOM)</h1>
+    <p>PPrimero <strong>parágrafo</strong></p>
     <p>Segundo parágrafo</p>
-    <div>Clique em aqui</div>
+    <div id="nome_da_id">div definida por ID</div>
+    <div name="nome_de_name">div definida por Nome</div>
+    <div class="nome_da_classe">div definida por Classe</div>
     <script>
-        var p1 = window.document.getElementsByTagName('p')[0]
-        window.document.write('Conteúdo do primeiro parágrafo: ' + p1.innerText)
-        p1.style.color = 'blue' 
+        // DECLARAÇÃO DE VARIÁVEIS
+        var corpo = window.document.body
+        var p0 = window.document.getElementsByTagName('p')[0] // seleciona o primeiro parágrafo
+        var p1 = window.document.getElementsByTagName('p')[1] // seleciona o segundo parágrafo
+        var d0 = window.document.getElementById('nome_da_id') // seleciona a div por sua ID
+        var d1 = window.document.getElementsByName('nome_de_name')[0] // seleciona a div por seu nome
+        var d2 = window.document.getElementsByClassName('nome_da_classe')[0] // seleciona a div por sua classe
+
+        // MANIPULANDO AS VARIÁVEIS DECLARADAS
+        window.document.write('Conteudo do primeiro parágrafo: ' + p0.innerText + '</br>') // concatenação. innerText = somente o texto sem as tags filhas
+        window.document.write(`Conteudo do primerio paragráfo: ${p0.innerHTML}</br>`) // innerHTML = texto e formatação HTML com as tags filhas
+        window.document.write(`Conteudo do segundo parágrafo: ${p1.innerText}`) // string template
+        p0.style.color = 'blue' 
+        p1.style.color = 'red'
+        corpo.style.background = 'cian'
+        d0.style.background = 'green'
+        d1.style.background = 'blue'
+        d2.style.background = 'red'
     </script>
 </body>
 </html>
@@ -31,4 +48,10 @@
 //window.document.write(window.document.charset)
 //window.document.write(window.navigator.appName)
 //window.document.write(window.document.URL)
+
+// var d0 = window.document.querySelector('div#nome_da_id') // seleciona a div pela id dela com querySelector (*)
+// var d0 = window.document.quarySelector('div.nome_da_classe') // seleciona a div pela id dela com querySelector (*)
+(*) OBS importante: toda div é representada por #
+                    toda classe é representada por .
+    Atenção: querySelector é um método mais recente                   
 -->
