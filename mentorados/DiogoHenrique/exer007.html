@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando números</title>
+    <style>
+        /*CSS*/
+        body{
+            font: normal 10pt Arial;
+        }
+        input{
+            font: normal 10pt Arial;
+            width: 100px;
+        }
+        div#res_soma{
+            margin-bottom: 20px;
+        }
+        div#res_subtrair{
+            margin-bottom: 20px;
+        }
+        div#res_multiplicacao{
+            margin-bottom: 20px;
+        }
+        div#res_potenciacao{
+            margin-bottom: 20px;
+        }
+        div#res_resto{
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!--HTML-->
+    <h1>Calculadora Simples</h1>
+    <input type="number" name="txtn11" id="txtn11"> +
+    <input type="number" name="txtn21" id="txtn21">
+    <input type="button" value="Somar" onclick="somar()">
+    <div id="res_soma">Resultado</div>
+
+    <input type="number" name="txtn12" id="txtn12"> -
+    <input type="number" name="txtn22" id="txtn22">
+    <input type="button" value="Subtrair" onclick="subtrair()">
+    <div id="res_subtrair">Resultado</div>
+    
+    <input type="number" name="txtn13" id="txtn13"> *
+    <input type="number" name="txtn23" id="txtn23">
+    <input type="button" value="Multiplicar" onclick="multiplicacao()">
+    <div id="res_multiplicacao">Resultado</div>
+    
+    <input type="number" name="txtn14" id="txtn14"> ^
+    <input type="number" name="txtn24" id="txtn24">
+    <input type="button" value="Potência" onclick="potenciacao()">
+    <div id="res_potenciacao">Resultado</div>
+
+    <input type="number" name="txtn15" id="txtn15"> %
+    <input type="number" name="txtn25" id="txtn25">
+    <input type="button" value="Resto" onclick="resto()">
+    <div id="res_resto">Resultado</div>
+    
+    
+
+    <script>
+        // Java Script
+        // declaração de variáveis
+        // funções
+        function somar(){
+            var tn1 = window.document.getElementById('txtn11') 
+            var tn2 = window.document.querySelector('input#txtn21') 
+            var res = window.document.getElementById('res_soma')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var soma = n1 + n2
+            res.innerHTML = soma
+        }
+        function subtrair(){
+            var tn1 = window.document.getElementById('txtn12') 
+            var tn2 = window.document.getElementById('txtn22') 
+            var res = window.document.getElementById('res_subtrair')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var subtracao = n1 - n2
+            res.innerHTML = subtracao
+        }
+        function multiplicacao(){
+            var tn1 = window.document.getElementById('txtn13') 
+            var tn2 = window.document.getElementById('txtn23') 
+            var res = window.document.getElementById('res_multiplicacao')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var produto = n1 * n2
+            res.innerHTML = produto
+        }
+        function potenciacao(){
+            var tn1 = window.document.getElementById('txtn14') 
+            var tn2 = window.document.getElementById('txtn24') 
+            var res = window.document.getElementById('res_potenciacao')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var potencia = n1 ** n2
+            res.innerHTML = potencia
+        }
+        function resto(){
+            var tn1 = window.document.getElementById('txtn15') 
+            var tn2 = window.document.getElementById('txtn25') 
+            var res = window.document.getElementById('res_resto')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var resto_ = n1 % n2
+            res.innerHTML = resto_
+        }
+    </script>
+</body>
+</html>
