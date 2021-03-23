@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>/* div#area significa a div de id area */
+        div#area{
+            font: normal 20pt Arial;
+            background: green;
+            color: white;
+            width: 200px; /*largura da div = 200 pixels*/
+            height: 200px; /*altura da div = 200 pixels*/
+            line-height: 200px; /*altura da linha = 200 pixels*/
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area"> <!--onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()"--> <!--(*)-->
+        clique aqui
+    </div>
+    <script>
+        // declaração de variável
+        var a = window.document.getElementById('area') // ligação do objeto a com o elemento área
+        
+        // "Ouvidores do JS"
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+        
+        // declaração de funções e blocos
+        function clicar() {
+            a.innerText = 'Clicou!'
+            a.style.background = 'red'
+        }
+        function entrar(){
+            a.innerText = 'Entrou!'
+            a.style.background = 'blue'
+        }
+        function sair(){
+            a.innerText = 'Saiu!'
+            a.style.background = 'green'
+        }
+    </script>
+</body>
+</html>
+
+<!--Evento é tudo aquilo que pode acontecer com um determinado elemento
+**Eventos de Mouse** 
+Os principais eventos são:
+mouseenter = movimento do mouse para dentro da div
+mousemove  = movimento do mouse pela região da div
+mousedown  = clicar e segura
+mouseup    = soltar o clique
+click      = clicar e soltar (rapidamente)
+mouseout   = movimento do mouse para fora da div
+
+Para mais referências sobre eventos, veja: https://developer.mozilla.org/pt-BR/docs/Web/Events
+
+-->
+<!--Disparo dentro do HTML (muito poluído quando se tem muitos eventos 
+    (*) onclick = nome do método que queremos disparar. clicar é nome da ação
+lê-se: quando você clicar dentro da div (evento detectado pelo método onclick) será disparado a ação clicar()
+    Disparo dentro do JS (mais limpo)
+-->
