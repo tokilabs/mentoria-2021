@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora simples</title>
+    <style>
+        body{
+            background-color: rgb(221, 229, 233);
+            color: rgb(14, 13, 13);
+            font: normal 18pt Arial;     
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora Simples</h1>
+    <script>
+        // Alerta
+        window.alert('Olá, você está prestes a usar uma calculadora MUITO SIMPLES')
+        
+        // declaração e inicialização das variáveis
+        var numero1 = window.prompt('Informe o primeiro número:')
+        numero1 = Number(numero1)
+        var numero2 = window.prompt('Informe o segundo número:')
+        numero2 = Number(numero2)
+
+        // Operações aritmética simples
+        var soma = numero1 + numero2
+        var subtracao = numero1 - numero2
+        var multiplicacao = numero1 * numero2
+        var divisao = numero1 / numero2
+        var potencia = numero1 ** numero2
+        var resto = numero1 % numero2
+
+        // saída dos resultados usando alert
+        window.alert(`Adição: ${numero1} + ${numero2} = ${soma}`)
+        window.alert(`Subtração: ${numero1} - ${numero2} = ${subtracao}`)
+        window.alert(`Multiplicação: ${numero1} * ${numero2} = ${multiplicacao}`)
+        window.alert(`Divisão: ${numero1} / ${numero2} = ${divisao}`)
+        window.alert(`Potenciação: ${numero1} ^ ${numero2} = ${potencia}`)
+        window.alert(`Resto: ${numero1} % ${numero2} = ${resto}`)
+
+        // saída dos resultados usando write
+        window.document.write('<h2>Resultado das operações aritmética simples</h2> </br>')
+        window.document.write(`<h3>Primeiro número informado: ${numero1} </h3>`)
+        window.document.write(`<h3>Segundo número informado: ${numero2}</h3> </br></br>`)
+        window.document.write(`Adição: ${numero1} + ${numero2} = ${soma} </br></br>`)
+        window.document.write(`Subtração: ${numero1} - ${numero2} = ${subtracao} </br></br>`)
+        window.document.write(`Multiplicação: ${numero1} * ${numero2} = ${multiplicacao} </br></br>`)
+        window.document.write(`Divisão: ${numero1} / ${numero2} = ${divisao} </br></br>`)
+        window.document.write(`Potenciação: ${numero1} ^ ${numero2} = ${potencia}</br></br>`)
+        window.document.write(`Resto: ${numero1} % ${numero2} = ${resto} </br></br>`)
+    </script>
+</body>
+</html>
