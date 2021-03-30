@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+@font-face {
+    font-family: 'FonteLogo';
+    src: url(../projeto-glass-html5/_fonts/bubblegum-sans-regular.otf);
+}
+
+body {
+    background-color: #dddddd;
+    color: rgba(0,0,0,1);
+}
+
+div#interface {
+    width: 1400px;
+    background-color:white;
+    margin: -20px auto 0px auto;
+    box-shadow: 0px 0px 10px rgba(0,0,0,.5);
+    padding: 12px;
+}
+
+p {
+    text-align: justify;
+    text-indent: 50px;
+}
+
+header#cabecalho img#icone {
+    position:absolute;
+    left: 1200px;
+    top: 40px;
+    height: 150px;
+}
+
+header {
+    width: 100%;
+    justify-items: stretch;
+}
+
+header#cabecalho {
+    border-bottom: 1px #606060 solid;
+    height: 150px;
+    background: url("../projeto-glass-html5/glass-logo-peq.jpg") no-repeat 0px 100px;
+}
+
+header#cabecalho h1 {
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 40px;
+    color: #606060;
+    text-shadow;: rgba(0,0,0,.6);
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+header#cabecalho h2 {
+    font-family: 'Titillium Web', sans-serif;
+    color: #8888;
+    font-size: 15px;
+    padding: 0;
+    margin-top: 0px;
+}
+
+figure.foto-legenda {
+    border: 8px solid red
+    padding: 10px
+}
+
+/* formatação do menu */
+
+nav#menu {
+    display:block;
+}
+
+nav#menu ul {
+    list-style: none;
+    text-transform: uppercase;
+    position: absolute;
+    top: -20px;
+    left: 850px;
+}
+
+nav#menu li {
+    display: inline-block;
+    background-color: #dddd;
+    padding: 10px;
+    margin: 2px;
+    transition: background-color 1s;  
+}
+
+nav#menu h1 {
+    display: none;
+
+}
+
+nav#menu li:hover {
+    background-color: #606060;
+    transition-duration: 1s;
+}
+
+nav#menu a {
+    text-decoration: none;
+    color: black
+}
+
+nav#menu a:hover {
+    color:whitesmoke;
+}
+
+section#corpo {
+    display: block;
+    width: 650px;
+    float: left;
+}
+
+table#tabelaspec {
+    border: 1px solid gray;
+    border-spacing: 0px;
+    margin-left:auto;
+}
+
+table#tabelaspec td {
+    border: 1px solid gray
+}
+
+aside#lateral {
+    display: block;
+    width: 500px;
+    float: right;
+    border: 3px;
+}
+
+footer#rodape {
+    clear: both;
+}
